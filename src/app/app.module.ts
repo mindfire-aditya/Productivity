@@ -19,7 +19,9 @@ import { GoalItemComponent } from './goal-list/goal-item/goal-item.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { WishItemComponent } from './wish-list/wish-item/wish-item.component';
 import { HeaderComponent } from './header/header.component';
-import { MaterialModule } from './material/material.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,14 +40,16 @@ import { MaterialModule } from './material/material.module';
     WishListComponent,
     WishItemComponent,
     HeaderComponent,
-
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MaterialModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

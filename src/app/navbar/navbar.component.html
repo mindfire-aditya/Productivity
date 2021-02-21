@@ -1,5 +1,59 @@
-<button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
+<!-- <mat-toolbar color="primary" class="navbar">
+    <div class="brand">Productivity</div>
+    <div class="navItems">
+        <nav>
+            <button mat-button routerLink="/">Home</button>
+            <button mat-button routerLink="/register">Register</button>
+            <button mat-button routerLink="/login">Login</button>
+        </nav>
+    </div>
+    <div class="personIcon">
+        <i class="material-icons">person</i>
+    </div>
+</mat-toolbar> -->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a routerLink="/" class="brand-logo">Productivity
+                <i class="material-icons left">timeline</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a routerLink="/" routerLinkActive="active">Home
+                        <i class="material-icons left">home</i>
+                    </a>
+                </li>
+                <li *ngIf="!loggedIn">
+                    <a routerLink="/register" routerLinkActive="active">Register
+                        <i class="material-icons left">app_registration</i>
+                    </a>
+                </li>
+                <li *ngIf="!loggedIn">
+                    <a routerLink="/login" routerLinkActive="active">Login
+                        <i class="material-icons left">login</i>
+                    </a>
+                </li>
+                <li *ngIf="loggedIn">
+                    <a routerLink="/posts" routerLinkActive="active">Posts
+                        <i class="material-icons left">dynamic_feed</i>
+                    </a>
+                </li>
+                <li *ngIf="loggedIn">
+                    <a routerLink="/goals" routerLinkActive="active">Goals
+                        <i class="material-icons left">task</i>
+                    </a>
+                </li>
+                <li *ngIf="loggedIn">
+                    <a routerLink="/wishlist" routerLinkActive="active">Wislist
+                        <i class="material-icons left">shopping_cart</i>
+                    </a>
+                </li>
+                <li *ngIf="loggedIn">
+                    <a routerLink="/logout" routerLinkActive="active">Logout
+                        <i class="material-icons left">logout</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

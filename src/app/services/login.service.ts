@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  creds = {
+    username: 'aditya',
+    password: '12345678',
+  };
 
-  constructor() { }
+  authorized = new EventEmitter<boolean>();
+
+  constructor() {}
 }
